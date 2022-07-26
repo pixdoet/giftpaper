@@ -1,0 +1,11 @@
+# ignore python venv files
+bin/*
+include/*
+lib/*
+pyvenv.cfg
+
+# ignore the src folder for development
+src/*
+
+# ignore compiled files
+compiled.*

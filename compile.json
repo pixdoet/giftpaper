@@ -1,0 +1,12 @@
+{
+    "output": "./compiled.user.js",
+    "files": [
+        "src/header.js",
+        "src/main.js",
+        "src/settings.js",
+        "src/styles.js",
+        "src/watch.js"
+    ],
+    "verbose": true,
+    "closure": false
+}
