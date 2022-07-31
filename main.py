@@ -8,7 +8,7 @@
 
 import json
 import os
-import sys
+from jsmin import jsmin
 
 
 def loadFile(file):
@@ -58,6 +58,7 @@ def bundle():
     if checkFiles():
         mainResponseContext = loadFile("compile.json")
         outputFile = mainResponseContext["output"]
+        useBabel = mainResponseContext["minify"]
         files = getAllFiles()
         # clear the already existing output file
         with open(outputFile, "w+") as mainF:
@@ -68,6 +69,11 @@ def bundle():
                     mainF.write(f"\n{f.read()}")
                     if mainF:
                         print(f"Bundled {file} into {outputFile}")
+        if useBabel:
+            print("Bundling finished. Now minifying with jsmin...")
+            with open(f"{outputFile}", "r") as mainF:
+                with open(f"{outputFile}.min.js", "w+") as f:
+                    f.write(jsmin(mainF.read()))
         print(f"Finished bundling! Your script can be found in {outputFile}")
 
 

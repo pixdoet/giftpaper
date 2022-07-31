@@ -8,5 +8,5 @@
         "src/watch.js"
     ],
     "verbose": true,
-    "closure": false
+    "minify": true
 }
