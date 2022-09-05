@@ -1,2 +1,5 @@
 # giftpaper
-Python bundler to compile userscripts with a lot of external includes.
+Python bundler to compile userscripts with a lot of different js files.
+
+# Installation, usage and features
+See [the docs folder](/docs)
