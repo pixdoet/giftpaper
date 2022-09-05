@@ -7,7 +7,7 @@ Used to specify the output directory. The output file will be placed in the dire
 ## `files`
 An array that stores the files for compiling. The contents must be a full file path that points towards a file, ie: `/src/main.js`
 
-## `minifier`
+## `minify`
 **EXPERIMENTAL**
 
 Uses the [jsmin](https://pypi.org/jsmin) minifier to minify the output, allowing for more compact and lightweight scripts. **Note: using this option can break certain scripts.**
